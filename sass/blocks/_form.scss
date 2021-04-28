@@ -1,0 +1,69 @@
+.form {
+   display: flex; // убрали отступы у input
+   justify-content: center;
+   margin: 0 auto;
+
+   &__input {
+      width: 240px;
+
+      /* Mobile */
+      @media (max-width: 899px) {
+         width: 100%;
+      }
+   }
+
+   .input {
+      display: block;
+      height: 60px;
+      padding: 0 30px;
+
+      border-radius: 30px;
+      border: 2px solid rgba(0, 0, 0, 0);
+      background: rgba(0, 0, 0, 0.75);
+
+      font-weight: 700;
+      font-size: 14px;
+      color: #fff;
+
+      &::placeholder {
+         color: #fff;
+      }
+
+      &:focus {
+         outline: none;
+         border: 2px solid #00c470;
+      }
+
+      /* Mobile */
+      @media (max-width: 899px) {
+         padding: 0 46px;
+      }
+
+      /* Mobile XS */
+      @media (max-width: 599px) {
+         padding: 0 36px;
+      }
+   }
+
+   & > * + * {
+      margin-left: 20px;
+
+      /* Mobile */
+      @media (max-width: 899px) {
+         margin-left: 0;
+         margin-top: 20px;
+      }
+   }
+
+   /* Mobile */
+   @media (max-width: 899px) {
+      flex-direction: column;
+
+      width: 370px;
+   }
+
+   /* Mobile XS */
+   @media (max-width: 599px) {
+      width: 290px;
+   }
+}

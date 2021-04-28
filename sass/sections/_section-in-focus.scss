@@ -1,0 +1,83 @@
+.section-in-focus {
+   padding: 80px 0 40px;
+   overflow-x: hidden; //если контент выходит за пределы секции - он скрывается
+
+   .section-row {
+      flex-direction: row-reverse;
+      align-items: flex-start;
+
+      &__content {
+         padding-top: 30px;
+         width: 470px;
+
+         /* Tablet */
+         @media (max-width: 1199px) {
+            padding-top: 20px;
+            width: 420px;
+         }
+
+         /* Mobile */
+         @media (max-width: 899px) {
+            padding-top: unset;
+            max-width: 370px;
+         }
+
+         /* Mobile XS */
+         @media (max-width: 599px) {
+            max-width: 290px;
+         }
+      }
+
+      &__img {
+         /* Tablet */
+         @media (max-width: 1199px) {
+            width: 420px;
+         }
+
+         /* Mobile */
+         @media (max-width: 899px) {
+            width: 170px;
+
+            img {
+               max-width: unset;
+               width: 415px;
+            }
+         }
+
+         /* Mobile XS */
+         @media (max-width: 599px) {
+            width: 290px;
+
+            img {
+               max-width: 100%;
+            }
+         }
+      }
+
+      /* Mobile */
+      @media (max-width: 899px) {
+         flex-direction: row;
+      }
+
+      /* Mobile XS */
+      @media (max-width: 599px) {
+         flex-direction: column-reverse;
+         align-items: center;
+      }
+   }
+
+   /* Tablet */
+   @media (max-width: 1199px) {
+      padding: 50px 0 20px;
+   }
+
+   /* Mobile */
+   @media (max-width: 899px) {
+      padding-bottom: 0;
+   }
+
+   /* Mobile XS */
+   @media (max-width: 599px) {
+      padding: 40px 0;
+   }
+}

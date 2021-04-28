@@ -1,0 +1,87 @@
+// Ширина и высота линии в иконке
+$lineWidth: 20px;
+$lineHeight: 3px;
+$lineMargin: 4px;
+$color: #000;
+
+// Размеры контейнера
+$width: 60px;
+$height: 60px;
+
+.nav-icon {
+   width: $width;
+   height: $height;
+   border-radius: 50%;
+   border: none;
+   outline: none;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   cursor: pointer;
+
+   transition: background-color 0.2s ease-in;
+
+   &:hover {
+      background-color: #00c470;
+
+      .nav-icon__middle,
+      .nav-icon__middle::before,
+      .nav-icon__middle::after {
+         background-color: #fff;
+      }
+   }
+}
+
+.nav-icon__middle {
+   position: relative;
+   width: $lineWidth;
+   height: $lineHeight;
+   border-radius: 2px;
+   background-color: $color;
+
+   &::before,
+   &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: $lineWidth;
+      height: $lineHeight;
+      border-radius: 2px;
+      transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+      background-color: $color;
+   }
+
+   &::before {
+      top: -($lineHeight + $lineMargin);
+   }
+
+   &::after {
+      top: $lineHeight + $lineMargin;
+   }
+}
+
+/* Active state */
+.nav-icon.nav-icon--active {
+   z-index: 999;
+   position: fixed;
+}
+
+.nav-icon.nav-icon--active .nav-icon__middle {
+   background-color: transparent;
+
+   &::before,
+   &::after {
+      top: 0;
+      transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+   }
+
+   &::before {
+      transform: rotate(45deg);
+   }
+
+   &::after {
+      transform: rotate(-45deg);
+   }
+}

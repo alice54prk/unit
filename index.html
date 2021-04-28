@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <!-- encoding -->
+      <meta charset="UTF-8" />
+      <!-- Mobile support -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <!-- Title and SEO -->
+      <title>Юнит-таск менеджер</title>
+      <meta
+         name="description"
+         content="Управляй задачами и проектами из любой точки мира вместе с ЮНИТ."
+      />
+      <meta
+         name="keywords"
+         content="юнит, таск менеджер, приложение, создан для управления, контроль бюджета, статистика и графики, множественные приоритеты, управляй задачами и проектами из любой точки, онлайн, оффлайн"
+      />
+
+      <!-- Styles -->
+      <link rel="stylesheet" href="./css/main.css" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap"
+         rel="stylesheet"
+      />
+
+      <!-- owlCarousel -->
+      <link rel="stylesheet" href="./libs/owlCarousel2/assets/owl.carousel.min.css" />
+
+      <!-- Open Graph -->
+      <!-- <meta property="og:url" content="https://webcademy.ru/" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Туристическое агентство Форест Тревел" />
+      <meta property="og:description" content="Турпоходы по дикой природе" />
+      <meta property="og:image" content="./img/opengraph.jpg" /> -->
+
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png" />
+      <link rel="manifest" href="./img/favicon/site.webmanifest" />
+      <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#1a60cf" />
+      <link rel="shortcut icon" href="./img/favicon/favicon.ico" />
+      <meta name="msapplication-TileColor" content="#00aba9" />
+      <meta name="msapplication-config" content="./img/favicon/browserconfig.xml" />
+      <meta name="theme-color" content="#ffffff" />
+   </head>
+   <body>
+      <svg style="display: none" xmlns="http://www.w3.org/2000/svg">
+         <symbol id="search-icon" viewBox="0 0 20 20">
+            <path
+               fill-rule="evenodd"
+               clip-rule="evenodd"
+               d="M7.70001 13.2C10.7376 13.2 13.2 10.7375 13.2 7.69995C13.2 4.66239 10.7376 2.19995 7.70001 2.19995C4.66245 2.19995 2.20001 4.66239 2.20001 7.69995C2.20001 10.7375 4.66245 13.2 7.70001 13.2Z"
+               stroke-width="3"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+            />
+            <path
+               d="M16.8 18.4L11.2 12"
+               stroke-width="3"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+            />
+         </symbol>
+      </svg>
+
+      <header class="header">
+         <div class="header__section">
+            <div class="header__buttons">
+               <!-- Иконка навигации -->
+               <button class="nav-icon">
+                  <span class="nav-icon__middle"></span>
+               </button>
+               <!-- Навигация -->
+               <nav class="nav">
+                  <h2 class="title-2">навигация по сайту</h2>
+                  <ul class="nav__list">
+                     <li><a href="#functional">Функционал</a></li>
+                     <li><a href="#flexible-control">Гибкое управление</a></li>
+                     <li><a href="#in-focus">Всегда в фокусе</a></li>
+                     <li><a href="#price">Цены</a></li>
+                     <li><a href="#clients">Отзывы клиентов</a></li>
+                  </ul>
+               </nav>
+
+               <form class="header__buttons-search search">
+                  <input class="search__input" type="text" placeholder="Введите текст для поиска" />
+                  <button class="search__button">
+                     <svg fill="none" stroke="black" width="20" height="20">
+                        <use href="#search-icon"></use>
+                     </svg>
+                  </button>
+               </form>
+            </div>
+
+            <div class="container header__content">
+               <div class="header__content-title">
+                  <h1>ЮНИТ</h1>
+
+                  <p>
+                     Управляй задачами и проектами из любой точки вместе с ЮНИТ. Дома. На работе. В
+                     дороге. Онлайн. Оффлайн.
+                  </p>
+               </div>
+
+               <form class="form">
+                  <input
+                     class="form__input input"
+                     name="user"
+                     type="text"
+                     placeholder="Ваше имя"
+                     autocomplete="off"
+                  />
+
+                  <input
+                     class="form__input input"
+                     name="email"
+                     type="email"
+                     placeholder="Email"
+                     autocomplete="off"
+                  />
+
+                  <button class="button-start" type="submit">начать триал</button>
+               </form>
+            </div>
+
+            <a class="header__scroll" href="#functional">
+               <svg
+                  width="32"
+                  height="48"
+                  viewBox="0 0 32 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+               >
+                  <path
+                     fill-rule="evenodd"
+                     clip-rule="evenodd"
+                     d="M17.324 0H14.67C6.41698 0.618 -0.00201416 7.06802 -0.00201416 14.817V33.071C-1.41601e-05 41.3 7.176 48 16 48C24.824 48 32 41.3 32 33.069V14.811C32 7.06797 25.58 0.617 17.324 0ZM29 32.868C29 39.553 23.167 44.987 16 44.987C8.833 44.987 3 39.553 3 32.868V15.1C3 8.41698 8.832 2.98199 16 2.98199C23.168 2.98199 29 8.41698 29 15.1V32.865V32.868ZM16 13C15.7394 12.9975 15.4809 13.0464 15.2393 13.144C14.9977 13.2415 14.7776 13.3858 14.5919 13.5685C14.4061 13.7513 14.2582 13.9688 14.1566 14.2088C14.0551 14.4488 14.0018 14.7064 14 14.967V20.033C14.0321 20.5406 14.2564 21.0168 14.6272 21.3648C14.998 21.7129 15.4874 21.9066 15.996 21.9066C16.5045 21.9066 16.994 21.7129 17.3648 21.3648C17.7356 21.0168 17.9599 20.5406 17.992 20.033V14.967C17.988 14.4422 17.7761 13.9404 17.4026 13.5717C17.0292 13.2029 16.5248 12.9973 16 13Z"
+                     fill="white"
+                  />
+               </svg>
+            </a>
+         </div>
+      </header>
+
+      <section class="section-functional" id="functional">
+         <div class="container">
+            <header class="section-functional__header">
+               <h2 class="title-2">функционал</h2>
+               <h3 class="title-3">Получайте больше</h3>
+            </header>
+
+            <ul class="section-functional__list">
+               <li class="section-functional__list-item">
+                  <img src="./img/sections/functional-icons/manage.svg" alt="manage" />
+                  <div class="section-functional__list-item-text">
+                     <h4 class="title-4">Создан для управления</h4>
+                     <p>
+                        Согласно ставшей уже классической работе Филипа Котлера, рекламная площадка
+                        отталкивает рейтинг.
+                     </p>
+                  </div>
+               </li>
+
+               <li class="section-functional__list-item">
+                  <img
+                     src="./img/sections/functional-icons/voice-control.svg"
+                     alt="voice control"
+                  />
+                  <div class="section-functional__list-item-text">
+                     <h4 class="title-4">Голосовое управление</h4>
+                     <p>
+                        Согласно ставшей уже классической работе Филипа Котлера, рекламная площадка
+                        отталкивает рейтинг.
+                     </p>
+                  </div>
+               </li>
+
+               <li class="section-functional__list-item">
+                  <img
+                     src="./img/sections/functional-icons/budget-control.svg"
+                     alt="budget control"
+                  />
+                  <div class="section-functional__list-item-text">
+                     <h4 class="title-4">Контроль бюджета</h4>
+                     <p>
+                        Согласно ставшей уже классической работе Филипа Котлера, рекламная площадка
+                        отталкивает рейтинг.
+                     </p>
+                  </div>
+               </li>
+
+               <li class="section-functional__list-item">
+                  <img src="./img/sections/functional-icons/statistics.svg" alt="statistics" />
+                  <div class="section-functional__list-item-text">
+                     <h4 class="title-4">Статистика и графики</h4>
+                     <p>
+                        Согласно ставшей уже классической работе Филипа Котлера, рекламная площадка
+                        отталкивает рейтинг.
+                     </p>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </section>
+
+      <section class="section-cta">
+         <!-- section Call To Action -->
+         <div class="container">
+            <div class="section-cta__content">
+               <h2>Начните использовать <span class="bold-uppercase">юнит</span> уже сегодня.</h2>
+
+               <button class="button-start">подключить</button>
+            </div>
+         </div>
+      </section>
+
+      <section class="section-flexible-control" id="flexible-control">
+         <div class="container">
+            <div class="section-row section-row--padding-left-right">
+               <div class="section-row__content">
+                  <header class="section-row__content-header">
+                     <h2 class="title-2">гибкое управление</h2>
+                     <h3 class="title-3">Задачи и подзадачи</h3>
+                  </header>
+
+                  <div class="section-row__content-text">
+                     <p>
+                        Тактика выстраивания отношений с коммерчекими агентами, вопреки мнению
+                        П.Друкера, искажает продвигаемый отраслевой стандарт. Стратегический
+                        рыночный план традиционно масштабирует комплексный имидж. Спонсорство
+                        развивает формат события.
+                     </p>
+                  </div>
+               </div>
+
+               <div class="section-row__img">
+                  <img src="./img/sections/iphone.jpg" alt="iPhone X" />
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="section-in-focus" id="in-focus">
+         <div class="container">
+            <div class="section-row">
+               <div class="section-row__content">
+                  <header class="section-row__content-header">
+                     <h2 class="title-2">всегда в фокусе</h2>
+                     <h3 class="title-3">Множественные приоритеты</h3>
+                  </header>
+
+                  <div class="section-row__content-text">
+                     <p>
+                        Потребление существенно продуцирует рыночный традиционный канал. В
+                        соответствии с законом Ципфа, маркетинг основан на тщательном анализе
+                        данных. Наряду с этим, целевой трафик конкурентоспособен.
+                     </p>
+                  </div>
+               </div>
+
+               <div class="section-row__img">
+                  <img src="./img/sections/ipad.jpg" alt="iPad Pro" />
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="section-price" id="price">
+         <div class="container">
+            <div class="section-price__content">
+               <header class="section-price__header">
+                  <h2 class="title-2">цены</h2>
+                  <h3 class="title-3">Выберите подходящий план</h3>
+               </header>
+
+               <div class="cards-row">
+                  <!-- card base -->
+                  <div class="card-price">
+                     <div class="card-price__header">
+                        <h4 class="title-2">базовый</h4>
+
+                        <div class="card-price__tarif">
+                           <span class="card-price__tarif-amount">15</span>
+                           <span class="card-price__tarif-period">$/мес</span>
+                        </div>
+                     </div>
+
+                     <ul class="card-price__list">
+                        <li class="card-price__list-item">10 проектов</li>
+                        <li class="card-price__list-item">5 участников</li>
+                        <li class="card-price__list-item">&infin; количество задач</li>
+                        <li class="card-price__list-item">5 GB медиа хранилище</li>
+                        <li class="card-price__list-item">Поддержка по Email</li>
+                     </ul>
+
+                     <button class="card-price__button" type="submit">выбрать</button>
+                  </div>
+
+                  <!-- card standart -->
+                  <div class="card-price card-price--active">
+                     <div class="card-price__header">
+                        <h4 class="title-2">стандарт</h4>
+
+                        <div class="card-price__tarif">
+                           <span class="card-price__tarif-amount">65</span>
+                           <span class="card-price__tarif-period">$/мес</span>
+                        </div>
+                     </div>
+
+                     <ul class="card-price__list">
+                        <li class="card-price__list-item">50 проектов</li>
+                        <li class="card-price__list-item">10 участников</li>
+                        <li class="card-price__list-item">&infin; количество задач</li>
+                        <li class="card-price__list-item">25 GB медиа хранилище</li>
+                        <li class="card-price__list-item">Поддержка по Email</li>
+                     </ul>
+
+                     <button class="card-price__button" type="submit">выбрать</button>
+                  </div>
+
+                  <!-- card premium -->
+                  <div class="card-price">
+                     <div class="card-price__header">
+                        <h4 class="title-2">премиум</h4>
+
+                        <div class="card-price__tarif">
+                           <span class="card-price__tarif-amount">125</span>
+                           <span class="card-price__tarif-period">$/мес</span>
+                        </div>
+                     </div>
+
+                     <ul class="card-price__list">
+                        <li class="card-price__list-item">100 проектов</li>
+                        <li class="card-price__list-item">30 участников</li>
+                        <li class="card-price__list-item">&infin; количество задач</li>
+                        <li class="card-price__list-item">50 GB медиа хранилище</li>
+                        <li class="card-price__list-item">Поддержка по Email</li>
+                     </ul>
+
+                     <button class="card-price__button" type="submit">выбрать</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="section-clients" id="clients">
+         <div class="container">
+            <header class="section-clients__header">
+               <h2 class="title-2">наши клиенты</h2>
+               <h3 class="title-3">Что говорят пользователи</h3>
+            </header>
+
+            <div class="section-clients__slider">
+               <button class="slider__arrow slider__arrow--left" id="sliderPrev">
+                  <svg
+                     width="24"
+                     height="24"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg"
+                  >
+                     <g class="slider__arrow-svg">
+                        <path
+                           d="M20 12H4"
+                           stroke-width="2"
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                        />
+                        <path
+                           d="M10 18L4 12L10 6"
+                           stroke-width="2"
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                        />
+                     </g>
+                  </svg>
+               </button>
+
+               <button class="slider__arrow slider__arrow--right" id="sliderNext">
+                  <svg
+                     width="24"
+                     height="24"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg"
+                  >
+                     <g class="slider__arrow-svg">
+                        <path
+                           d="M4 12H20"
+                           stroke-width="2"
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                        />
+                        <path
+                           d="M14 6L20 12L14 18"
+                           stroke-width="2"
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                        />
+                     </g>
+                  </svg>
+               </button>
+
+               <div class="slider owl-carousel owl-theme" id="clients-slider">
+                  <div class="slider-item">
+                     <div class="slider-item__text">
+                        <p>
+                           Это потрясающее приложение которое помогло мне завершить все мои дела, и
+                           сделать дипломный проект раньше срока.
+                        </p>
+                     </div>
+
+                     <div class="slider-item__author">
+                        <div class="slider-item__author-avatar">
+                           <img src="./img/sections/users/user.jpg" alt="avatar" />
+                        </div>
+
+                        <div class="slider-item__author-name">
+                           <span>Фрилансер</span>
+                           <span>Николай Остапов</span>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="slider-item">
+                     <div class="slider-item__text">
+                        <p>
+                           Классное приложение! Могу контролировать свои дела и легко находить
+                           свободное время для себя)
+                        </p>
+                     </div>
+
+                     <div class="slider-item__author">
+                        <div class="slider-item__author-avatar">
+                           <img src="./img/sections/users/cris.jpg" alt="avatar" />
+                        </div>
+
+                        <div class="slider-item__author-name">
+                           <span>Дизайнер</span>
+                           <span>Кристина Афанасьева</span>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="slider-item">
+                     <div class="slider-item__text">
+                        <p>
+                           Очень удобное и качественное приложение. На интуитивном уровне, понятно
+                           как пользоваться и настроить интерфейст для задач!
+                        </p>
+                     </div>
+
+                     <div class="slider-item__author">
+                        <div class="slider-item__author-avatar">
+                           <img src="./img/sections/users/den.jpg" alt="avatar" />
+                        </div>
+
+                        <div class="slider-item__author-name">
+                           <span>Программист</span>
+                           <span>Денис Чирков</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <footer class="footer">
+         <div class="container">
+            <div class="footer-row">
+               <div class="footer__nav">
+                  <a class="footer__nav-item" href="#">о нас</a>
+                  <a class="footer__nav-item" href="#">блог</a>
+                  <a class="footer__nav-item" href="#">контакты</a>
+               </div>
+
+               <div class="footer__social">
+                  <!-- twitter -->
+                  <a class="footer__social-icon" href="#">
+                     <img src="./img/sections/social-icons/twitter.svg" alt="twitter" />
+                  </a>
+                  <!-- facebook -->
+                  <a class="footer__social-icon" href="#">
+                     <img src="./img/sections/social-icons/facebook.svg" alt="facebook" />
+                  </a>
+                  <!-- insta -->
+                  <a class="footer__social-icon" href="#">
+                     <img src="./img/sections/social-icons/instagram.svg" alt="instagram" />
+                  </a>
+                  <!-- vk -->
+                  <a class="footer__social-icon" href="#">
+                     <img src="./img/sections/social-icons/vk.svg" alt="vkontakte" />
+                  </a>
+               </div>
+            </div>
+
+            <div class="footer__copyright">
+               <p>Копирайт &copy; 2021 ЮНИТ. Все права защищены.</p>
+            </div>
+         </div>
+      </footer>
+
+      <!-- scripts carousel -->
+      <script src="./libs/jquery-3.6.0.min.js"></script>
+      <script src="./libs/owlCarousel2/owl.carousel.min.js"></script>
+
+      <!-- castom JS -->
+      <script src="./js/clients-carousel.js"></script>
+      <script src="./js/nav.js"></script>
+      <script src="./js/search.js"></script>
+   </body>
+</html>

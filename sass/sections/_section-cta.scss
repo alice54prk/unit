@@ -1,0 +1,49 @@
+.section-cta {
+   @include bgImage ("./../img/sections/cta-bg/bg.jpg");
+   padding: 85px 0;
+
+   &::before {
+      @extend %overlay;
+   }
+
+   &__content {
+      position: relative;
+      text-align: center;
+      color: #fff;
+
+      h2 {
+         margin-bottom: 40px;
+         font-weight: 500;
+         font-size: 22px;
+         line-height: 1;
+
+         /* Mobile */
+         @media (max-width: 899px) {
+            margin-bottom: 30px;
+            font-size: 20px;
+         }
+
+         /* Mobile XS */
+         @media (max-width: 599px) {
+            margin-bottom: 20px;
+            font-size: 18px;
+         }
+      }
+   }
+
+   /* Desktop MS */
+   @media (max-width: 1600px) {
+      @include bgImage("./../img/sections/cta-bg/bg-1600.jpg");
+   }
+
+   /* Tablet */
+   @media (max-width: 1199px) {
+      @include bgImage("./../img/sections/cta-bg/bg-900.jpg");
+      padding: 40px 0;
+   }
+
+   /* Mobile */
+   @media (max-width: 899px) {
+      @include bgImage("./../img/sections/cta-bg/bg-600.jpg");
+   }
+}

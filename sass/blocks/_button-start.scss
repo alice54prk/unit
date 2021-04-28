@@ -1,0 +1,25 @@
+.button-start {
+   padding: 0 40px;
+   height: 60px;
+   border-radius: 30px;
+   border: none;
+   background: #00C470;
+
+   font-weight: 800;
+   font-size: 14px;
+   letter-spacing: 4px;
+   text-transform: uppercase;
+   color: #FFF;
+
+   cursor: pointer;
+
+   transition: 0.5s;
+
+   &:hover {
+      text-shadow: -2px 2px 10px #000, 2px -2px 10px #fff; 
+   }
+
+   &:focus {
+      outline: none;
+   }
+}
